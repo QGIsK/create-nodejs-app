@@ -1,6 +1,9 @@
+// eslint-ignore-line
+require('module-alias/register');
+
 const mongoose = require('mongoose');
+const paginate = require('@models/plugins/paginate.plugin');
 const setupTestDB = require('../../../utils/setupTestDB');
-const paginate = require('../../../../src/models/plugins/paginate.plugin');
 
 const projectSchema = mongoose.Schema({
   name: {
