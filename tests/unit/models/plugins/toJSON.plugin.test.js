@@ -1,5 +1,8 @@
+// eslint-ignore-line
+require('module-alias/register');
+
 const mongoose = require('mongoose');
-const { toJSON } = require('../../../../src/models/plugins');
+const { toJSON } = require('@models/plugins');
 
 describe('toJSON plugin', () => {
   let connection;

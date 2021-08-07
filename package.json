@@ -26,6 +26,18 @@
     "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up",
     "prepare": "husky install"
   },
+  "_moduleAliases": {
+    "@root": "./",
+    "@config": "./src/config",
+    "@controllers": "./src/controllers",
+    "@docs": "./src/docs",
+    "@middlewares": "./src/middlewares",
+    "@models": "./src/models",
+    "@routes": "./src/routes",
+    "@services": "./src/services",
+    "@utils": "./src/utils",
+    "@validations": "./src/validations"
+  },
   "keywords": [
     "node",
     "node.js",
@@ -61,6 +73,7 @@
     "http-status": "^1.4.0",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
@@ -79,7 +92,8 @@
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-security": "^1.4.0",
