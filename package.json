@@ -27,6 +27,7 @@
     "prepare": "husky install"
   },
   "_moduleAliases": {
+    "@root": "./",
     "@config": "./src/config",
     "@controllers": "./src/controllers",
     "@docs": "./src/docs",
@@ -91,7 +92,8 @@
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-security": "^1.4.0",
