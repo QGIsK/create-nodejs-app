@@ -26,6 +26,17 @@
     "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up",
     "prepare": "husky install"
   },
+  "_moduleAliases": {
+    "@config": "./src/config",
+    "@controllers": "./src/controllers",
+    "@docs": "./src/docs",
+    "@middlewares": "./src/middlewares",
+    "@models": "./src/models",
+    "@routes": "./src/routes",
+    "@services": "./src/services",
+    "@utils": "./src/utils",
+    "@validations": "./src/validations"
+  },
   "keywords": [
     "node",
     "node.js",
@@ -61,6 +72,7 @@
     "http-status": "^1.4.0",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",

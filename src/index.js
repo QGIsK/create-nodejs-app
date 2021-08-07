@@ -1,3 +1,6 @@
+// eslint-ignore-line
+require('module-alias/register');
+
 const mongoose = require('mongoose');
 const app = require('./app');
 const config = require('./config/config');
