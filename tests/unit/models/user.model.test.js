@@ -1,8 +1,5 @@
-// eslint-ignore-line
-require('module-alias/register');
-
 const faker = require('faker');
-const { User } = require('@models');
+const { User } = require('../../../src/models');
 
 describe('User model', () => {
   describe('User validation', () => {

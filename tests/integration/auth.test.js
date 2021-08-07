@@ -1,21 +1,18 @@
-// eslint-ignore-line
-require('module-alias/register');
-
 const request = require('supertest');
 const faker = require('faker');
 const httpStatus = require('http-status');
 const httpMocks = require('node-mocks-http');
 const moment = require('moment');
 const bcrypt = require('bcryptjs');
-const app = require('@src/app');
-const config = require('@config/config');
-const auth = require('@middlewares/auth');
-const { tokenService, emailService } = require('@services');
-const ApiError = require('@utils/ApiError');
-const { User, Token } = require('@models');
-const { roleRights } = require('@config/roles');
-const { tokenTypes } = require('@config/tokens');
+const app = require('../../src/app');
+const config = require('../../src/config/config');
+const auth = require('../../src/middlewares/auth');
+const { tokenService, emailService } = require('../../src/services');
+const ApiError = require('../../src/utils/ApiError');
 const setupTestDB = require('../utils/setupTestDB');
+const { User, Token } = require('../../src/models');
+const { roleRights } = require('../../src/config/roles');
+const { tokenTypes } = require('../../src/config/tokens');
 const { userOne, admin, insertUsers } = require('../fixtures/user.fixture');
 const { userOneAccessToken, adminAccessToken } = require('../fixtures/token.fixture');
 

@@ -1,13 +1,10 @@
-// eslint-ignore-line
-require('module-alias/register');
-
 const mongoose = require('mongoose');
 const httpStatus = require('http-status');
 const httpMocks = require('node-mocks-http');
-const { errorConverter, errorHandler } = require('@middlewares/error');
-const ApiError = require('@utils/ApiError');
-const config = require('@config/config');
-const logger = require('@config/logger');
+const { errorConverter, errorHandler } = require('../../../src/middlewares/error');
+const ApiError = require('../../../src/utils/ApiError');
+const config = require('../../../src/config/config');
+const logger = require('../../../src/config/logger');
 
 describe('Error middlewares', () => {
   describe('Error converter', () => {

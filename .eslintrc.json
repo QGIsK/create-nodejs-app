@@ -4,7 +4,7 @@
     "jest": true
   },
   "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:security/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
-  "plugins": ["jest", "security", "prettier", "import"],
+  "plugins": ["jest", "security", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2018
   },
@@ -15,10 +15,6 @@
           [
             "@root",
             "./"
-          ],
-          [
-            "@src",
-            "./src"
           ],
           [
             "@config",
