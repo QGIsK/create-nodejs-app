@@ -31,9 +31,7 @@ async function hasYarn() {
 if (process.argv.length < 3) {
   console.log('Please specify the target project directory.');
   console.log('For example:');
-  console.log('    npx create-nodejs-app my-app');
-  console.log('    OR');
-  console.log('    npm init nodejs-app my-app');
+  console.log('    create-nodejs-app my-app');
   process.exit(1);
 }
 
@@ -89,7 +87,6 @@ async function setup() {
     fs.unlinkSync(path.join(appPath, 'CODE_OF_CONDUCT.md'));
     fs.unlinkSync(path.join(appPath, 'CONTRIBUTING.md'));
     fs.unlinkSync(path.join(appPath, 'bin', 'createNodejsApp.js'));
-    fs.rmdirSync(path.join(appPath, 'bin'));
     if (!useYarn) {
       fs.unlinkSync(path.join(appPath, 'yarn.lock'));
     }
