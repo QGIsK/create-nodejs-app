@@ -86,7 +86,7 @@ cp .env.example .env
 - **Code quality**: with [Codacy](https://www.codacy.com)
 - **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
 - **Editor config**: consistent editor configuration using [EditorConfig](https://editorconfig.org)
-- **Module aliases**: keep code clean and avoid paths like: '../../../file.js` [ModuleAlias](https://github.com/ilearnio/module-alias)
+- **Module aliases**: keep code clean and avoid paths like: '../../../file.js` [module-alias](https://github.com/ilearnio/module-alias)
 
 ## Commands
 
