@@ -1,8 +1,8 @@
 # RESTful API Node Server Boilerplate
 
-[![Build Status](https://travis-ci.org/hagopj13/node-express-boilerplate.svg?branch=master)](https://travis-ci.org/hagopj13/node-express-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/hagopj13/node-express-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/hagopj13/node-express-boilerplate?branch=master)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# This project is a fork from https://github.com/hagopj13/node-express-boilerplate/
+
+## And has been edited to our liking/needs since
 
 A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
 
@@ -29,7 +29,7 @@ If you would still prefer to do the installation manually, follow these steps:
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/hagopj13/node-express-boilerplate.git
+git clone --depth 1 https://github.com/qgisk/create-nodejs-app.git
 cd node-express-boilerplate
 npx rimraf ./.git
 ```
@@ -84,9 +84,9 @@ cp .env.example .env
 - **Docker support**
 - **Code coverage**: using [coveralls](https://coveralls.io)
 - **Code quality**: with [Codacy](https://www.codacy.com)
-- **Git hooks**: with [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
 - **Linting**: with [ESLint](https://eslint.org) and [Prettier](https://prettier.io)
 - **Editor config**: consistent editor configuration using [EditorConfig](https://editorconfig.org)
+- **Module aliases**: keep code clean and avoid paths like: '../../../file.js` [ModuleAlias](https://github.com/ilearnio/module-alias)
 
 ## Commands
 
@@ -220,7 +220,7 @@ The app has a centralized error handling mechanism.
 Controllers should try to catch the errors and forward them to the error handling middleware (by calling `next(error)`). For convenience, you can also wrap the controller inside the catchAsync utility wrapper, which forwards the error.
 
 ```javascript
-const catchAsync = require('../utils/catchAsync');
+const catchAsync = require('@utils/catchAsync');
 
 const controller = catchAsync(async (req, res) => {
   // this error will be forwarded to the error handling middleware
@@ -245,8 +245,8 @@ For example, if you are trying to get a user from the DB who is not found, and y
 
 ```javascript
 const httpStatus = require('http-status');
-const ApiError = require('../utils/ApiError');
-const User = require('../models/User');
+const ApiError = require('@utils/ApiError');
+const User = require('@models/User');
 
 const getUser = async (userId) => {
   const user = await User.findById(userId);
@@ -264,9 +264,9 @@ The validation schemas are defined in the `src/validations` directory and are us
 
 ```javascript
 const express = require('express');
-const validate = require('../../middlewares/validate');
-const userValidation = require('../../validations/user.validation');
-const userController = require('../../controllers/user.controller');
+const validate = require('@middlewares/validate');
+const userValidation = require('@validations/user.validation');
+const userController = require('@controllers/user.controller');
 
 const router = express.Router();
 
@@ -279,8 +279,8 @@ To require authentication for certain routes, you can use the `auth` middleware.
 
 ```javascript
 const express = require('express');
-const auth = require('../../middlewares/auth');
-const userController = require('../../controllers/user.controller');
+const auth = require('@middlewares/auth');
+const userController = require('@controllers/user.controller');
 
 const router = express.Router();
 
@@ -307,8 +307,8 @@ The `auth` middleware can also be used to require certain rights/permissions to 
 
 ```javascript
 const express = require('express');
-const auth = require('../../middlewares/auth');
-const userController = require('../../controllers/user.controller');
+const auth = require('@middlewares/auth');
+const userController = require('@controllers/user.controller');
 
 const router = express.Router();
 
@@ -418,6 +418,7 @@ The `paginate` method returns a Promise, which fulfills with an object having th
 Linting is done using [ESLint](https://eslint.org/) and [Prettier](https://prettier.io).
 
 In this app, ESLint is configured to follow the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) with some modifications. It also extends [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to turn off all rules that are unnecessary or might conflict with Prettier.
+Also uses [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import) and [eslint-import-resolver-alias](https://github.com/johvin/eslint-import-resolver-alias) to handle module-alias imports
 
 To modify the ESLint configuration, update the `.eslintrc.json` file. To modify the Prettier configuration, update the `.prettierrc.json` file.
 
@@ -425,12 +426,9 @@ To prevent a certain file or directory from being linted, add it to `.eslintigno
 
 To maintain a consistent coding style across different IDEs, the project contains `.editorconfig`
 
-## Contributing
-
-Contributions are more than welcome! Please check out the [contributing guide](CONTRIBUTING.md).
-
 ## Inspirations
 
+- [hagopj13/node-express-boilerplate/](https://github.com/hagopj13/node-express-boilerplate/)
 - [danielfsousa/express-rest-es2017-boilerplate](https://github.com/danielfsousa/express-rest-es2017-boilerplate)
 - [madhums/node-express-mongoose](https://github.com/madhums/node-express-mongoose)
 - [kunalkapadia/express-mongoose-es6-rest-api](https://github.com/kunalkapadia/express-mongoose-es6-rest-api)
