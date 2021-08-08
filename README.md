@@ -1,8 +1,8 @@
 # RESTful API Node Server Boilerplate
 
-# This project is a fork from https://github.com/hagopj13/node-express-boilerplate/
+## This project is a fork from [hagopj13/node-express-boilerplate](https://github.com/hagopj13/node-express-boilerplate/)
 
-## And has been edited to our liking/needs since
+### And has been edited to our liking/needs since
 
 A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, and Mongoose.
 
