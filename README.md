@@ -13,13 +13,21 @@ By running a single command, you will get a production-ready Node.js app install
 To create a project, simply run:
 
 ```bash
-npx create-nodejs-express-app <project-name>
+npx github:qgisk/create-nodejs-app <project-name>
 ```
 
 Or
 
 ```bash
-npm init nodejs-express-app <project-name>
+npm init github:qgisk/nodejs-app <project-name>
+```
+
+Or
+
+```bash
+npm i -g github:qgisk/create-nodejs-app
+
+create-nodejs-app test
 ```
 
 ## Manual Installation
